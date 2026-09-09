@@ -1,0 +1,143 @@
+.settings-page {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 20px 0 60px;
+}
+
+.settings-page h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 20px;
+}
+
+.settings-card {
+    background: #ffffff;
+    border: 1px solid #d9d9dd;
+    border-radius: 15px;
+    padding: 28px;
+    margin-bottom: 20px;
+}
+
+.settings-card h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 20px;
+}
+
+.settings-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.settings-row strong {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.settings-row p {
+    font-size: 14px;
+    color: #77798a;
+    margin: 0;
+}
+
+.settings-toggle {
+    width: 46px;
+    height: 26px;
+    border-radius: 999px;
+    background: #d9d9dd;
+    border: none;
+    cursor: pointer;
+    padding: 3px;
+    flex-shrink: 0;
+    display: flex;
+}
+
+.settings-toggle span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    transition: transform 0.15s ease;
+}
+
+.settings-toggle.on {
+    background: #050518;
+}
+
+.settings-toggle.on span {
+    transform: translateX(20px);
+}
+
+.settings-field {
+    margin-bottom: 16px;
+}
+
+.settings-field label {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.settings-field input {
+    width: 100%;
+    height: 50px;
+    background: #eeeef2;
+    border: 1.5px solid transparent;
+    border-radius: 12px;
+    padding: 0 16px;
+    font-size: 16px;
+    color: #222;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.settings-field input:focus {
+    border-color: #050518;
+    background: #ffffff;
+}
+
+.settings-error {
+    font-size: 14px;
+    color: #b3261e;
+    margin: -6px 0 14px;
+}
+
+.settings-save {
+    height: 46px;
+    padding: 0 24px;
+    border: none;
+    border-radius: 12px;
+    background: #050518;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.settings-save:hover {
+    background: #17172c;
+}
+
+.settings-save:disabled {
+    background: #b7b7c2;
+    cursor: not-allowed;
+}
+
+body.dark .settings-card {
+    background: #14141b;
+    border-color: #26262f;
+}
+
+body.dark .settings-field input {
+    background: #1a1a22;
+    color: #e8e8ec;
+}
+
+body.dark .settings-field input:focus {
+    background: #202029;
+    border-color: #e8e8ec;
+}
