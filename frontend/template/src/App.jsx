@@ -3,10 +3,11 @@ import './App.css'
 
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
-import Footer from './components/Footer'
+
 
 import Home from './pages/Home'
 import Profile from './pages/Profile'
+import EditProfile from './pages/EditProfile'
 import Notifications from './pages/Notifications'
 import Settings from './pages/Settings'
 import NewPost from './pages/NewPost'
@@ -22,12 +23,12 @@ function AppLayout() {
         <Sidebar />
         <Outlet />
       </main>
-      <Footer />
+
     </div>
   )
 }
 
-// Header + sidebar, no footer, wide content area (for Profile)
+// Header + sidebar, no footer, wide content area (for Profile / Settings)
 function SidebarLayout() {
   return (
     <div className="app">
@@ -57,9 +58,10 @@ function App() {
           <Route path="/new-post" element={<NewPost />} />
         </Route>
 
-        {/* Sidebar only, wide content, no header/footer */}
+        {/* Sidebar only layout */}
         <Route element={<SidebarLayout />}>
           <Route path="/profile" element={<Profile />} />
+          <Route path="/edit-profile" element={<EditProfile />} />
           <Route path="/settings" element={<Settings />} />
         </Route>
       </Routes>

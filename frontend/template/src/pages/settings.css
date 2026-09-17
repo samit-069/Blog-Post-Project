@@ -1,51 +1,56 @@
+/* ── Settings page ── */
 .settings-page {
-    max-width: 560px;
+    max-width: 500px;
     margin: 0 auto;
-    padding: 20px 0 60px;
+    padding: 20px 0 48px;
 }
 
 .settings-page h1 {
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 700;
-    margin: 0 0 20px;
+    margin: 0 0 16px;
 }
 
 .settings-card {
     background: #ffffff;
-    border: 1px solid #d9d9dd;
-    border-radius: 15px;
-    padding: 28px;
-    margin-bottom: 20px;
+    border: 1px solid #e4e4e8;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 14px;
 }
 
 .settings-card h2 {
-    font-size: 20px;
-    font-weight: 600;
-    margin: 0 0 20px;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 16px;
+    color: #77798a;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
 }
 
 .settings-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 16px;
 }
 
 .settings-row strong {
-    font-size: 16px;
+    font-size: 14px;
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
 }
 
 .settings-row p {
-    font-size: 14px;
+    font-size: 12px;
     color: #77798a;
     margin: 0;
 }
 
+/* Toggle switch */
 .settings-toggle {
-    width: 46px;
-    height: 26px;
+    width: 42px;
+    height: 24px;
     border-radius: 999px;
     background: #d9d9dd;
     border: none;
@@ -53,11 +58,12 @@
     padding: 3px;
     flex-shrink: 0;
     display: flex;
+    transition: background 0.2s;
 }
 
 .settings-toggle span {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     background: white;
     transition: transform 0.15s ease;
@@ -68,31 +74,32 @@
 }
 
 .settings-toggle.on span {
-    transform: translateX(20px);
+    transform: translateX(18px);
 }
 
 .settings-field {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 }
 
 .settings-field label {
     display: block;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 600;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
 }
 
 .settings-field input {
     width: 100%;
-    height: 50px;
+    height: 42px;
     background: #eeeef2;
     border: 1.5px solid transparent;
-    border-radius: 12px;
-    padding: 0 16px;
-    font-size: 16px;
+    border-radius: 10px;
+    padding: 0 14px;
+    font-size: 14px;
     color: #222;
     outline: none;
     box-sizing: border-box;
+    transition: border-color 0.15s, background 0.15s;
 }
 
 .settings-field input:focus {
@@ -101,21 +108,22 @@
 }
 
 .settings-error {
-    font-size: 14px;
+    font-size: 12px;
     color: #b3261e;
-    margin: -6px 0 14px;
+    margin: -4px 0 12px;
 }
 
 .settings-save {
-    height: 46px;
-    padding: 0 24px;
+    height: 40px;
+    padding: 0 20px;
     border: none;
-    border-radius: 12px;
+    border-radius: 10px;
     background: #050518;
     color: white;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 700;
     cursor: pointer;
+    transition: background 0.15s;
 }
 
 .settings-save:hover {
@@ -127,17 +135,64 @@
     cursor: not-allowed;
 }
 
+/* ── Dark mode — full coverage ── */
+body.dark .settings-page h1 {
+    color: #e8e8ec;
+}
+
 body.dark .settings-card {
     background: #14141b;
     border-color: #26262f;
 }
 
+body.dark .settings-card h2 {
+    color: #5a5a6a;
+}
+
+body.dark .settings-row strong {
+    color: #e8e8ec;
+}
+
+body.dark .settings-row p {
+    color: #5a5a6a;
+}
+
+body.dark .settings-field label {
+    color: #e8e8ec;
+}
+
 body.dark .settings-field input {
     background: #1a1a22;
     color: #e8e8ec;
+    border-color: transparent;
+}
+
+body.dark .settings-field input::placeholder {
+    color: #5a5a6a;
 }
 
 body.dark .settings-field input:focus {
     background: #202029;
-    border-color: #e8e8ec;
+    border-color: #6c6cff;
+}
+
+body.dark .settings-toggle {
+    background: #2e2e3a;
+}
+
+body.dark .settings-toggle.on {
+    background: #6c6cff;
+}
+
+body.dark .settings-save {
+    background: #6c6cff;
+}
+
+body.dark .settings-save:hover {
+    background: #5a5ae6;
+}
+
+body.dark .settings-save:disabled {
+    background: #2e2e3a;
+    color: #5a5a6a;
 }

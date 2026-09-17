@@ -1,0 +1,208 @@
+/* ── Edit Profile page ── */
+.edit-profile-page {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px 24px 48px;
+}
+
+.edit-profile-topbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.edit-profile-topbar h1 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.edit-profile-back-btn {
+    height: 34px;
+    padding: 0 14px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1.5px solid #d9d9dd;
+    background: #ffffff;
+    color: #050518;
+    transition: background 0.12s;
+    flex-shrink: 0;
+}
+
+.edit-profile-back-btn:hover {
+    background: #f1f1f4;
+}
+
+/* Avatar row */
+.edit-profile-avatar-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.edit-profile-avatar-btn {
+    height: 34px;
+    padding: 0 16px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1.5px solid #d9d9dd;
+    background: #ffffff;
+    color: #050518;
+    transition: background 0.12s;
+}
+
+.edit-profile-avatar-btn:hover {
+    background: #f1f1f4;
+}
+
+/* Fields */
+.edit-profile-field {
+    margin-bottom: 16px;
+}
+
+.edit-profile-field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.edit-profile-field input,
+.edit-profile-field textarea {
+    width: 100%;
+    background: #eeeef2;
+    border: 1.5px solid transparent;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 14px;
+    color: #222;
+    outline: none;
+    box-sizing: border-box;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.15s, background 0.15s;
+}
+
+.edit-profile-field input {
+    height: 42px;
+    padding: 0 14px;
+    resize: none;
+}
+
+.edit-profile-field input::placeholder,
+.edit-profile-field textarea::placeholder {
+    color: #9698a6;
+}
+
+.edit-profile-field input:focus,
+.edit-profile-field textarea:focus {
+    border-color: #050518;
+    background: #ffffff;
+}
+
+/* Actions */
+.edit-profile-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+    justify-content: flex-end;
+}
+
+.edit-profile-cancel-btn {
+    height: 40px;
+    padding: 0 20px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1.5px solid #d9d9dd;
+    background: transparent;
+    color: #050518;
+    transition: background 0.12s;
+}
+
+.edit-profile-cancel-btn:hover {
+    background: #f1f1f4;
+}
+
+.edit-profile-save-btn {
+    height: 40px;
+    padding: 0 22px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    background: #050518;
+    color: white;
+    transition: background 0.15s;
+}
+
+.edit-profile-save-btn:hover {
+    background: #17172c;
+}
+
+.edit-profile-save-btn:disabled {
+    background: #b7b7c2;
+    cursor: not-allowed;
+}
+
+/* ── Dark mode ── */
+body.dark .edit-profile-topbar h1 {
+    color: #e8e8ec;
+}
+
+body.dark .edit-profile-back-btn,
+body.dark .edit-profile-avatar-btn,
+body.dark .edit-profile-cancel-btn {
+    background: #14141b;
+    border-color: #33333d;
+    color: #e8e8ec;
+}
+
+body.dark .edit-profile-back-btn:hover,
+body.dark .edit-profile-avatar-btn:hover,
+body.dark .edit-profile-cancel-btn:hover {
+    background: #202029;
+}
+
+body.dark .edit-profile-field label {
+    color: #e8e8ec;
+}
+
+body.dark .edit-profile-field input,
+body.dark .edit-profile-field textarea {
+    background: #1a1a22;
+    color: #e8e8ec;
+    border-color: transparent;
+}
+
+body.dark .edit-profile-field input::placeholder,
+body.dark .edit-profile-field textarea::placeholder {
+    color: #5a5a6a;
+}
+
+body.dark .edit-profile-field input:focus,
+body.dark .edit-profile-field textarea:focus {
+    background: #202029;
+    border-color: #6c6cff;
+}
+
+body.dark .edit-profile-save-btn {
+    background: #6c6cff;
+}
+
+body.dark .edit-profile-save-btn:hover {
+    background: #5a5ae6;
+}
+
+body.dark .edit-profile-save-btn:disabled {
+    background: #2e2e3a;
+    color: #5a5a6a;
+}
